@@ -3,12 +3,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {auth, database} from "../services/firebaseConfig";
 import {ref, get, child} from "firebase/database";
-import "../css/Profile.module.css"
+import classes from "../css/Profile.module.css"
 
 function Profile() {
     const [userData, setUserData] = useState();
     useEffect(() => {
+
         const userId = auth.currentUser.uid;
+
         const dbRef = ref(database);
         get(child(dbRef, `users/${userId}`))
             .then((snapshot) => {
@@ -16,26 +18,26 @@ function Profile() {
                     setUserData(snapshot.val());
                 }
             })
+
     }, [])
-    console.log(userData)
-    if (userData) return (<div>
+    if (userData) return (
+        <div>
             <Header/>
-            <div>
-                Login in as: <strong>{auth.currentUser.email}</strong>
-            </div>
             <div className="container d-flex justify-content-center mt-5">
-                <div className="card">
-                    <div className="top-container">
-                        <div className="ml-3">
-                            <p>{userData.name.toString()}</p>
-                            <p className="mail">{userData.email.toString()}</p>
-                        </div>
+                <div className="card" className={classes.div2}>
+                    <div className={classes.div1}>
+                        <p className={classes.p1}>Logged in as: {auth.currentUser.email.toString()}</p>
+                        <p className={classes.p1}>Hello, {userData.name.toString()}</p>
+                        <p className={classes.p1}>Are you ready for your next trip?</p>
+                        <p className={classes.p1}>Choose one of our destinations for an unforgettable experience!</p>
                     </div>
                 </div>
+                <img className={classes.img1} src='https://i.pinimg.com/564x/c1/ac/eb/c1aceb26d7866543c8e5b011c0c28d5f.jpg'></img>
             </div>
             <Footer/>
-        </div>); else {
-        return <div></div>
+        </div>)
+    else {
+        return <div>Invalid user</div>
     }
 }
 

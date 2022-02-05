@@ -1,17 +1,24 @@
 
-.middle-container:hover {
-    border: 1px solid #5957f9
+.div1 {
+    width: 25rem;
+    height: 17rem;
+    background-color: #ffe2ed;
+    text-align: center;
 }
 
+.div2 {
+    background-color: #ffe2ed;
+    margin-left: 5rem;
+}
 
-.round-div {
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center
+.p1 {
+    padding-top: 5rem;
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
