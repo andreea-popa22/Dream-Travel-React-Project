@@ -1,0 +1,17 @@
+
+.middle-container:hover {
+    border: 1px solid #5957f9
+}
+
+
+.round-div {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+

@@ -1,0 +1,12 @@
+.main {
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 40rem;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    color: #61132c;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+/*.container {*/
+/*    padding: 4rem 0;*/
+/*    background-color:#ffffff;*/
+/*    color:#4b4c4d;*/
+/*}*/
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 0;
+    padding: 2rem;
+    background: rgba(119, 0, 46,0.5);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.link1 {
+    font-size: 1rem;
+    padding:0 20px;
+    color: #61132c;
+}
