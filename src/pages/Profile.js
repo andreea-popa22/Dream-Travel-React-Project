@@ -26,8 +26,8 @@ function Profile() {
             <div className="container d-flex justify-content-center mt-5">
                 <div className="card" className={classes.div2}>
                     <div className={classes.div1}>
-                        <p className={classes.p1}>Logged in as: {auth.currentUser.email.toString()}</p>
-                        <p className={classes.p1}>Hello, {userData.name.toString()}</p>
+                        <p className={classes.p1}>Logged in as: <b>{auth.currentUser.email.toString()}</b></p>
+                        <p className={classes.p1}>Hello, <b>{userData.name.toString()}</b></p>
                         <p className={classes.p1}>Are you ready for your next trip?</p>
                         <p className={classes.p1}>Choose one of our destinations for an unforgettable experience!</p>
                     </div>

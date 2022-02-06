@@ -34,11 +34,15 @@ function DestinationsItem(props) {
                     <p>&#128197; {props.period}</p>
                     <p>{props.description}</p>
                 </div>
-                <div className={classes.actions}>
-                    <button onClick={toggleFavoriteStatusHandler}>
-                        {itemIsFavorite && auth.currentUser ? 'Remove from Favorites' : 'To Favorites'}
-                    </button>
-                </div>
+                { auth.currentUser ?
+                    <div className={classes.actions}>
+                        <button onClick={toggleFavoriteStatusHandler}>
+                            {itemIsFavorite && auth.currentUser ? 'Remove from Favorites' : 'To Favorites'}
+                        </button>
+                    </div>
+                    :
+                    <div></div>
+                }
             </Card>
         </li>
     );
